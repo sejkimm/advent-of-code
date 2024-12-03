@@ -48,6 +48,17 @@ fn main() {
                 std::process::exit(1);
             }
         },
+        "day3" => match part.as_str() {
+            "part1" => solutions::day3::run_part1(&input_file),
+            "part2" => solutions::day3::run_part2(&input_file),
+            _ => {
+                eprintln!(
+                    "Invalid part: {}. Allowed values are 'part1' or 'part2'.",
+                    part
+                );
+                std::process::exit(1);
+            }
+        },
         _ => {
             eprintln!("Day {} is not implemented!", day);
             std::process::exit(1);
