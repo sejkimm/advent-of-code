@@ -3,18 +3,22 @@ use std::fs::File;
 use std::io::{self, BufRead};
 use std::path::Path;
 
-pub fn run_part1(input_file: &str) {
-    println!("Reading Part 1 from file: {}", input_file);
-    let numbers = load_numbers_from_file(input_file);
-    let result = solve_part1(numbers);
-    println!("Part 1 Result: {}", result);
-}
+pub struct Day1;
 
-pub fn run_part2(input_file: &str) {
-    println!("Reading Part 2 from file: {}", input_file);
-    let numbers = load_numbers_from_file(input_file);
-    let result = solve_part2(numbers);
-    println!("Part 2 Result: {}", result);
+impl super::Solution for Day1 {
+    fn run_part1(input_file: &str) {
+        println!("Reading Part 1 from file: {}", input_file);
+        let numbers = load_numbers_from_file(input_file);
+        let result = solve_part1(numbers);
+        println!("Part 1 Result: {}", result);
+    }
+
+    fn run_part2(input_file: &str) {
+        println!("Reading Part 2 from file: {}", input_file);
+        let numbers = load_numbers_from_file(input_file);
+        let result = solve_part2(numbers);
+        println!("Part 2 Result: {}", result);
+    }
 }
 
 fn load_numbers_from_file(input_file: &str) -> (Vec<i32>, Vec<i32>) {
