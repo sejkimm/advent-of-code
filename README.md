@@ -4,6 +4,8 @@
 
 ## 2024
 
+## 2025
+
 ### How to run rust code?
 
 ```bash
@@ -17,7 +19,7 @@ cargo run -- <day> <part> <input_variant>
 #### Code Structure
 
 ```bash
-/2024/
+/{2024,2025}/
   |-- Cargo.toml           # Project configuration
   |-- src/
       |-- main.rs          # Entry point for running the challenges
